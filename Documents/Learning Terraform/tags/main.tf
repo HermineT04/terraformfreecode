@@ -5,6 +5,7 @@ provider "aws" {
   default_tags {
     tags = {
       Env = "dev"
+      Type = "Managed By Terraform"
     }
   }
 }
@@ -17,7 +18,7 @@ module "finance-bucket" {
   team    = "finance"
   service = "s3"
   extra_tags = {
-    contact = "aimee lara"
+    contact = "aimee-lara"
   }
 }
 
@@ -25,6 +26,6 @@ module "finance-bucket" {
 module "devops-bucket" {
   count   = 2
   source  = "./s3-bucket"
-  team    = "devops"
+  team    = "devolopers"
   service = "s3"
 }
