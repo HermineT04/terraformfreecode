@@ -17,7 +17,7 @@ module "finance-bucket" {
   team    = "finance"
   service = "s3"
   extra_tags = {
-    contact = "hermine"
+    contact = "aimee lara"
   }
 }
 
